@@ -16,10 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <meta-data
-            android:name="io.sentry.dsn"
-            android:value="https://2a86ade191004ef183075b04bc87dc56@o421109.ingest.sentry.io/5444815" />
-
         <activity android:name="com.gometroapp.tracking.sample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

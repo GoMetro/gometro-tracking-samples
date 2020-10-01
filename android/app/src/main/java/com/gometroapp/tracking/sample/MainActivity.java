@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gometroapp.tracking.GoMetroTracking;
+import com.gometroapp.tracking.logging.LoggerFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Context context = getApplicationContext();
+
+        LoggerFactory.setLogger(new DebugOverrideLogger());
 
         GoMetroTracking.initialise(
                 context,
