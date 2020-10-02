@@ -25,7 +25,7 @@ android {
         config {
             keyAlias localProperties.get("signingConfigs.config.keyAlias")
             keyPassword localProperties.get("signingConfigs.config.keyPassword")
-            storeFile localProperties.get("signingConfigs.config.storeFile")
+            storeFile file(localProperties.get("signingConfigs.config.storeFile"))
             storePassword localProperties.get("signingConfigs.config.storePassword")
         }
     }
