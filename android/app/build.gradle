@@ -12,6 +12,9 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+        buildConfigField "String", "GOMETRO_TRACKING_CLIENT_ID", "\"${localProperties.get("gometro.tracking.clientId")}\""
+        buildConfigField "String", "GOMETRO_TRACKING_CLIENT_SECRET", "\"${localProperties.get("gometro.tracking.clientSecret")}\""
+
         applicationId "com.gometroapp.tracking.sample"
         minSdkVersion 16
         targetSdkVersion 30

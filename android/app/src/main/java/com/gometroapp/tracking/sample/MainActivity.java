@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         GoMetroTracking.initialise(
                 context,
-                "test.tracking@gometroapp.com",
-                "P@ssw0rd123!",
+                BuildConfig.GOMETRO_TRACKING_CLIENT_ID,
+                BuildConfig.GOMETRO_TRACKING_CLIENT_SECRET,
                 "ThisIsATestDevice"
         );
     }
