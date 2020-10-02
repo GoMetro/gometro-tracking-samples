@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 context,
                 "test.tracking@gometroapp.com",
                 "P@ssw0rd123!",
-                "AGroup",
-                "AnEntity"
+                "ThisIsATestDevice"
         );
     }
 }
