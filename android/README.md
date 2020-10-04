@@ -72,4 +72,59 @@ public class MainActivity extends AppCompatActivity {
 In order to access/correct the data at a later stage using the REST API, you will need to provide an
 identifier for the device on which the SDK is installed. Whilst it is RECOMMENDED that this 
 identifier NOT be based on Personally Identifiable Information, the SDK will still perform a one 
-way hashing on this identifier to ensure the anonymity of the individual.   
+way hashing on this identifier to ensure the anonymity of the individual
+
+### Debug Logging
+
+Debug logging is disabled by default in the SDK. In order to enable it, you can create a delegating 
+Logger and set it on the LoggerFactory.
+
+```java
+package com.gometroapp.tracking.sample;
+
+import android.util.Log;
+
+import com.gometroapp.tracking.logging.AndroidLogger;
+import com.gometroapp.tracking.logging.Logger;
+
+public final class DebugOverrideLogger implements Logger {
+    
+    private Logger delegate = AndroidLogger.INSTANCE;
+    
+    ...
+
+    @Override
+    public void debug(String message) {
+        Log.d("GoMetroTracking", message);
+    }
+
+    @Override
+    public void debug(String format, Object... args) {
+        String message = String.format(format, args);
+        Log.d("GoMetroTracking", message);
+    }
+
+    @Override
+    public void debug(String message, Throwable throwable) {
+        Log.d("GoMetroTracking", message, throwable);
+    }
+    ...
+}
+``` 
+
+```java
+package com.gometroapp.tracking.sample;
+...
+import com.gometroapp.tracking.GoMetroTracking;
+import com.gometroapp.tracking.logging.LoggerFactory;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        ...
+        LoggerFactory.setLogger(new DebugOverrideLogger());
+        ...
+    }
+}
+```

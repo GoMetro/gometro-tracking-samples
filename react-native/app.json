@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "GoMetro Tracking Sample",
+    "slug": "gometro-tracking-samples-reactnative",
+    "version": "1.0.0",
+    "sdkVersion": "39.0.0",
+    "scheme": "gometrotracking",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.gometroapp.tracking.sample.reactnative"
+    },
+    "ios": {
+      "bundleIdentifier": "com.gometroapp.tracking.sample.reactnative"
+    }
+  }
+}
