@@ -14,7 +14,7 @@ repositories {
 dependencies {
     ...
 
-    implementation "com.gometroapp.tracking:gometro-tracking-android:1.0.16"
+    implementation "com.gometroapp.tracking:gometro-tracking-android:1.0.20"
     
     ...
 }
