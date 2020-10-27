@@ -93,8 +93,9 @@ public class MainActivity extends AppCompatActivity {
         ...
         GoMetroTracking.initialise(
             this,
-            <gometro_uma_username>,
-            <gometro_uma_password>
+            "<gometro_uma_username>",
+            "<gometro_uma_password>",
+            "<external_device_identifier>"
         );
         
         LoggerFactory.setLogger(new AndroidLogger(true, "GoMetroUma"));
